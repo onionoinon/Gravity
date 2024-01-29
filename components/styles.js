@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#E8EAED',
+      backgroundColor: '#02020a',
     },
   
     tasksWrapper: {
@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
       fontSize: 24,
       fontWeight: 'bold',
       paddingBottom: 0,
+      color:"white",
     },
   
     items: {
@@ -32,29 +33,32 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'space-around',
       alignItems: 'center',
-      padding: 10,
+      paddingBottom: 10,
       paddingTop: 10,
+      paddingLeft:'5%',
+      paddingRight:'5%',
+
     },
   
     input: {
       flex: 1,
       padding: 15,
-      backgroundColor: "#FFF",
       width: 250,
-      borderRadius: 60,
-      borderColor: "#C0C0C0",
+      borderRadius: 10,
       borderWidth: 1,
+      borderColor:"#8764A5",
+      color:'#fff',
     },
+
+    textInput: {
+      color: '#fff',
+     },
   
     addWrapper: {
       width: 60,
-      height: 60,
-      backgroundColor: '#FFF',
-      borderRadius: 60,
+      height: 10,
       justifyContent: 'center',
       alignItems: 'center',
-      borderColor: "#C0C0C0",
-      borderWidth: 1,
     },
   
     addText: {
@@ -63,12 +67,10 @@ const styles = StyleSheet.create({
     task: {
       flexDirection: 'row',
       alignItems: 'center',
-      backgroundColor: '#FFF',
+      backgroundColor: '#261F33',
       padding: 20,
       borderRadius: 10,
       marginBottom: 10,
-      borderWidth: 1,
-      borderColor: '#C0C0C0',
       paddingRight: 30,
       justifyContent:'space-between',
     },
@@ -81,14 +83,11 @@ const styles = StyleSheet.create({
       marginRight: 15,
     },
   
-    completedTaskIndicator: {
-      backgroundColor: 'green',
-    },
-  
     taskText: {
       fontWeight: 'bold',
       width: '70%',
-      marginRight: 10
+      marginRight: 10,
+      color:'#fff',
     },
   
     completedTaskText: {
@@ -100,7 +99,7 @@ const styles = StyleSheet.create({
       width: 24,
       height: 24,
       borderWidth: 2,
-      borderColor: '#000',
+      borderColor: '#fff',
       marginRight: 10,
     },
   
@@ -122,7 +121,6 @@ const styles = StyleSheet.create({
   
     buttonContainer: {
       padding: 5,
-      backgroundColor: '#fff',
       justifyContent:'space-between',
   
     },
@@ -136,7 +134,7 @@ const styles = StyleSheet.create({
     ScheduleMyDayButton: {
       height: 40,
       width: '50%', 
-      backgroundColor: '#55BCF6',
+      backgroundColor: '#7B2CBF',
       paddingVertical: 10,
       paddingHorizontal: 20,
       borderRadius: 10,
@@ -146,14 +144,14 @@ const styles = StyleSheet.create({
   
     scheduleMyDayButtonText: {
       color: 'white',
-      fontSize: 16,
+      fontSize: 15,
       fontWeight: 'bold',
     },
   
     AIScheduleButton: {
       height: 40,
       width: '45%', 
-      backgroundColor: '#55BCF6',
+      backgroundColor: '#7B2CFB',
       paddingVertical: 10,
       paddingHorizontal: 20,
       borderRadius: 10,
@@ -163,7 +161,7 @@ const styles = StyleSheet.create({
   
     AIScheduleButtonText: {
       color: 'white',
-      fontSize: 16,
+      fontSize: 15,
       fontWeight: 'bold',
     },
   
@@ -176,7 +174,6 @@ const styles = StyleSheet.create({
     settingsButton:{
       height: 40,
       width: '50%', 
-      backgroundColor: '#55BCF6',
       paddingVertical: 10,
       paddingHorizontal: 20,
       borderRadius: 10,
@@ -188,6 +185,14 @@ const styles = StyleSheet.create({
       display:'flex',
       flexDirection:'row',
       justifyContent: 'space-between',
+    },
+
+    addButton:{
+      height: 30,
+      width: 40, 
+      paddingVertical: 10,
+      paddingHorizontal: 20,
+      justifyContent:'space-around',
     }
 
     

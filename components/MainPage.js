@@ -64,7 +64,7 @@ const MainPage = () => {
         style={styles.settingsButton}
         onPress={handleSettingsNav}
         >
-        <Image source={require('./settings.png')} style={styles.logo1} />
+        <Image source={require('./gear.png')} style={styles.logo1} />
        </TouchableOpacity>  
        </View>
        
@@ -119,12 +119,15 @@ const MainPage = () => {
         <TextInput
           style={styles.input}
           placeholder={'Write a task'}
+          placeholderTextColor={'white'}
           value={task}
           onChangeText={(text) => setTask(text)}
+          color="fff"
+
         />
         <TouchableOpacity onPress={handleAddTask}>
           <View style={styles.addWrapper}>
-            <Text style={styles.addText}>+</Text>
+          <Image source={require('./plus3.png')} style={styles.addButton} />
           </View>
         </TouchableOpacity>
       </KeyboardAvoidingView>

@@ -3,7 +3,7 @@ import { KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpaci
 import {auth} from './firebase';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 
-const Login = ()=> {
+const Register = ()=> {
     const navigation = useNavigation();
 
     useEffect(()=>{
@@ -18,7 +18,7 @@ const Login = ()=> {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    {/*const handleSignUp=()=> {
+    const handleSignUp=()=> {
         auth
         .createUserWithEmailAndPassword(email, password)
         .then(userCredentials=>{
@@ -26,13 +26,13 @@ const Login = ()=> {
             console.log["Registeres with:",user.email]
         })
         .catch(error => console.error(error.message));
-    }*/}
-
-    const handleSignUpNav=()=> {
-        navigation.replace('Register')
     }
 
-    const handleLogin=()=> {
+    const handleLogInNav=()=> {
+        navigation.replace('Login')
+    }
+
+    {/*const handleLogin=()=> {
         auth
         .signInWithEmailAndPassword(email,password)
         .then(userCredentials=>{
@@ -40,7 +40,7 @@ const Login = ()=> {
             console.log["Logged in with:", user.email]
         })
         .catch(error => console.error(error.message));
-    }
+    }*/}
 
     return(
         <KeyboardAvoidingView
@@ -63,32 +63,33 @@ const Login = ()=> {
                     value={password}
                     onChangeText={text => setPassword(text)}
                     style={styles.Input}
-                    secureTextEntry
                     color="#fff"
+                    secureTextEntry
                 />
             </View>
             <View style={styles.buttonContainer}>
                 <TouchableOpacity
-                onPress ={handleLogin}
+                onPress ={handleSignUp}
                 style={styles.button}>
-                    <Text style={styles.buttonText}>Login</Text>
+                    <Text style={styles.buttonText}>Register</Text>
                 </TouchableOpacity>
+            </View>
 
                 {/*<TouchableOpacity
                 onPress ={handleSignUp}
                 style={[styles.button, styles.buttonOutline]}>
                     <Text style={styles.buttonOutlineText}>Register</Text>
     </TouchableOpacity>*/}
-                <View style={styles.loginContainer}>
-                    <Text style={styles.logindeftext}>Don't have an account? </Text>
-                    <TouchableOpacity onPress ={handleSignUpNav} ><Text style={styles.registertext}>Register now</Text></TouchableOpacity>
+                <View style={styles.registerContainer}>
+                    <Text style={styles.registerdeftext}>Already have an account? </Text>
+                    <TouchableOpacity onPress ={handleLogInNav} ><Text style={styles.registertext}>Log in</Text></TouchableOpacity>
                 </View>
-            </View>
+            
         </KeyboardAvoidingView>
     )
 }
 
-export default Login
+export default Register
 
 const styles =StyleSheet.create({
     container:{
@@ -108,18 +109,18 @@ const styles =StyleSheet.create({
         marginTop: 5,
         borderWidth:0.3,
         borderColor: '#605e6e',
+        color:"fff",
     },
 buttonContainer:{
-    width:'50%',
+    width:'40%',
     justifyContent:'space-between',
     alignItems: 'center',
     marginTop: 20,
-
 },
 
 button:{
     backgroundColor:'#7B2CBF',
-    width:'90%',
+    width:'100%',
     padding:15,
     borderRadius: 30,
     alignItems:'center',
@@ -142,25 +143,30 @@ buttonOutlineText:{
     fontSize: 16,},
 
     gravity: {
+        top: "28.5%",
+        left: "28%",
         fontSize: 35,
         fontWeight:'300',
         letterSpacing: 6,
         color: "#fff",
         textAlign: "center",
-        marginBottom:15,
+        position: "absolute",
       },
-      logindeftext:{
+      registerdeftext:{
         color:'#605e6e',
     fontWeight: '300',
-    fontSize: 15,
+    fontSize: 16,
       },
 registertext:{
     color:'#7B2CBF',
 
 },
-loginContainer:{
+registerContainer:{
     display:'flex',
     flexDirection:'row',
     marginTop:10,
+    width:'100%',
+    justifyContent:'center',
+
 },
 })
