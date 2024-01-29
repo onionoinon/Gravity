@@ -23,6 +23,7 @@ const LandingPage = () => {
         >
         <Text style={styles.getStarted}>GET STARTED</Text>
         </TouchableOpacity>
+
       </View>
     </View>
   );
@@ -40,10 +41,8 @@ const styles = StyleSheet.create({
     fontSize: 35,
     fontWeight:'300',
     letterSpacing: 6,
-    color: "#fff",
-    textAlign: "center",
-    position: "absolute",
   },
+
   myHomePageChild: {
     height: "0.71%",
     width: "1.54%",

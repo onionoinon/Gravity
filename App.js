@@ -3,9 +3,14 @@ import MainPage from './components/MainPage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './components/Login';
+<<<<<<< HEAD
 import Settings from './components/settings';
 import LandingPage from './components/LandingPage';
 import Register from './components/Register';
+=======
+import Settings from './components/Settings';
+import LandingPage from './components/LandingPage';
+>>>>>>> 3e7c09bf9625675bc675ce182da9254d952614e4
 
 const Stack = createNativeStackNavigator();
 
