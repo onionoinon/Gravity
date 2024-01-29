@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View} from 'react-native'
 import { auth } from './firebase'
 import { useNavigation } from '@react-navigation/native'
 
-const settings = () =>{
+const Settings = () =>{
     const navigation = useNavigation()
     const handleSignOut = () => {
     auth
@@ -27,7 +27,7 @@ return(
 )
 }
 
-export default settings;
+export default Settings;
 
 const styles= StyleSheet.create({
 container:{
